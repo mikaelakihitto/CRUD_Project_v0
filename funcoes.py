@@ -2,7 +2,7 @@ import os
 def Menu():
     clientes={}
     while True:
-        os.system('cls')
+        os.system('clear')
         print('='*30)
         print('Gerenciamento de Clintes'.center(30))
         print('='*30)
@@ -36,7 +36,7 @@ def Menu():
 
 def Listar_Clientes(clientes):
 
-    for cliente in clientes:
+    for cliente in clientes.values():
         print(cliente)
 
 def Cadastrar_Clientes(clientes):
