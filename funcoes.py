@@ -36,8 +36,8 @@ def Menu():
 
 def Listar_Clientes(clientes):
 
-    for cliente in clientes.values():
-        print(cliente)
+    for cliente in clientes:
+        print(cliente,clientes[cliente])
 
 def Cadastrar_Clientes(clientes):
 
@@ -56,18 +56,19 @@ def Cadastrar_Clientes(clientes):
 
 def Editando_Cliente(clientes):
 
-    cpf = input('Digite o CPF do cliente que deseja editar')
+    cpf = input('Digite o CPF do cliente que deseja editar: ')
 
     if cpf in clientes:
         nome = input('Digite o nome: ')
-        telefone = input('Digite o telefone')
-        endereco = input('Digite o endereco')
+        telefone = input('Digite o telefone: ')
+        endereco = input('Digite o endereco: ')
 
         cliente = {
           'nome': nome,
           'telefone': telefone,
           'endereco': endereco
         }
+        print('Cliente editado!')
 
         clientes[cpf]= cliente
     else:
@@ -75,10 +76,11 @@ def Editando_Cliente(clientes):
 
 def Excluindo_Cliente(clientes):
 
-    cpf = input('Digite o CPF do cliente que deseja apagar')
+    cpf = input('Digite o CPF do cliente que deseja apagar: ')
 
     if cpf in clientes:
         valor_removido = clientes.pop(cpf)
+        print('Cliente excluido')
     
     else:
         print('Nao existe esse cliente')
