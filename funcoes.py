@@ -26,9 +26,9 @@ def Menu():
             case '2':
                 Cadastrar_Clientes(clientes)
             case '3':
-                Editando_Cliente(clientes)
+                Editar_Clientes(clientes)
             case '4':
-                Excluindo_Cliente(clientes)
+                Excluir_Clientes(clientes)
             case '5':
                 break
         
@@ -54,7 +54,7 @@ def Cadastrar_Clientes(clientes):
 
     clientes[cpf]= cliente
 
-def Editando_Cliente(clientes):
+def Editar_Clientes(clientes):
 
     cpf = input('Digite o CPF do cliente que deseja editar: ')
 
@@ -74,7 +74,7 @@ def Editando_Cliente(clientes):
     else:
         print('Nao existe esse cliente')
 
-def Excluindo_Cliente(clientes):
+def Excluir_Clientes(clientes):
 
     cpf = input('Digite o CPF do cliente que deseja apagar: ')
 
